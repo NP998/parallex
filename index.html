@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+      }
+      body{
+          width: 100vw;
+          height: 100vh;
+          font-family: 'Playfair Display', serif;
+      }
+      
+       .navbar-section{
+        background-color: #031321;
+      
+       }
+      a{
+            color: #2196f3;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 15px;
+      }
+      a:hover{
+        color:#255784;
+            background-color: #2196f3;
+            box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
+            /* transition-delay:0.5s; */
+            border: 1px solid black;
+            color: black;
+      }
+      .navbar-nav>.nav-items:hover{
+          color: black;
+      }
+      .cols{
+          background-color: blanchedalmond;
+      }
+
+      .div1{
+          width: 100%;
+          height: 100%;
+          background-image: url("https://wallpapercave.com/wp/wp3614493.jpg");
+          background-size: cover;
+          /* opacity: 0.7; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-attachment: fixed;
+      }
+      .inside-div{
+          box-shadow: -5px 10px 76px 24px rgba(0,0,0,0.87);
+        -webkit-box-shadow: -5px 10px 76px 24px rgba(0,0,0,0.87);
+        -moz-box-shadow: -5px 10px 76px 24px rgba(0,0,0,0.87);
+          background-image: linear-gradient(to right, #152D35, rgb(119, 119, 128));
+          display: inline-block;
+          height: 15%;
+          width: 30%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+          
+      }
+      .inside-div>h1{
+          color: white;
+      }
+      @media only screen and (max-width:1200px)
+      {
+          .inside-div>h1{
+              font-size: 1.3rem;
+          }
+      }
+      @media only screen and (max-width:1000px)
+      {
+          .inside-div>h1{
+              font-size: 1rem;
+          }
+      }
+      @media only screen and (max-width:500px)
+      {
+          .inside-div>h1{
+              font-size: 0.6rem;
+          }
+      }
+      .section{
+          width: 100%;
+          height: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: black;
+          color: white;
+          opacity: 0.8;
+      }
+      .section>p{
+          padding:0 10px;
+          margin-top: 10px;
+      }
+      @media only screen and (max-width:500px)
+      {
+          .section{
+              height: 50%;
+          }
+      }
+      @media only screen and (max-width:600px)
+      {
+          .section>h1{
+              font-size: 1rem;
+          }
+          .section>p{
+              font-size: 0.7rem;
+          }
+          footer{
+              font-size: 0.7rem;
+          }
+      }
+      .div2{
+          width: 100%;
+          height: 100%;
+          background-image: url("https://wallpapertag.com/wallpaper/full/e/c/3/133268-star-wars-4k-wallpaper-2560x1373-for-mac.jpg");
+          background-size: cover;
+          /* opacity: 0.7; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content:space-evenly;
+          background-attachment: fixed;
+          flex-wrap: wrap;
+      }
+      .div3{
+          width: 100%;
+          height: 100%;
+          background-image: url("https://wallpapertag.com/wallpaper/full/7/6/c/156474-beautiful-4k-star-wars-wallpaper-3840x2160.jpg");
+          background-size: cover;
+          /* opacity: 0.7; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-attachment: fixed;
+      }
+    
+      .card-section{
+          height: 100%;
+          width: 100%;
+          background-image: url("https://th.bing.com/th/id/R.fe3ba221f23f6492e65e898cc7f323a5?rik=KhjRZ2xBYRX35w&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2015%2f12%2f262569-Star_Wars-stormtrooper.jpg&ehk=E0Su02jm%2fXVpC98nD6cIcWOOgrTaxYHwEfAPEbOfBU8%3d&risl=&pid=ImgRaw&r=0");
+          background-size: cover;
+          background-attachment: fixed;
+
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          padding-top: 10px;
+        }
+        .card{
+            border-radius: 10px;
+            margin: 5px;
+            background-color: black;
+            
+        }
+        .card:hover{
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.27);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            box-shadow: -5px 10px 76px 9px rgba(0,0,0,0.87);
+            -webkit-box-shadow: -5px 10px 76px 9px rgba(0,0,0,0.87);
+            -moz-box-shadow: -5px 10px 76px 9px rgba(0,0,0,0.87);
+        }
+        .card-section>.card>img{
+            background-size: cover;
+            height: 100%;
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        @media only screen and (max-width:600px)
+        {
+            .card-section{
+                 height: 200%;
+            }
+        }
+
+      /* this css only for footer */
+      footer{
+          height: 10%;
+          background-color: #031321;
+          color: #2196f3;
+          text-align: center;
+          padding-top: 10px;
+      }
+      
+   
+    </style>
+</head>
+<body>
+
+    <!-- navbar section  -->
+     
+    <nav class="navbar navbar-expand-lg navbar-section">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PARALLAX</a>
+          <button class="navbar-toggler btns" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon cols"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link nav-items" aria-current="page" href="#">Home</a>
+              <a class="nav-link nav-items" href="#">Features</a>
+              <a class="nav-link nav-items" href="#">Gallery</a>
+              <a class="nav-link nav-items" href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <!-- main section -->
+    <div class="div1">
+        <div class="inside-div">
+            <h1>STAR WARS</h1>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Section One</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, ut commodi, cum odit saepe quis
+             dolorum pariatur maiores natus, provident odio molestiae nostrum? Eum veniam consequuntur quaerat
+              aut sapiente voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, 
+              sunt voluptatum. Perspiciatis ipsa, numquam suscipit error itaque saepe assumenda neque similique
+              , praesentium aut facere aliquid quo? Perspiciatis cupiditate quas debitis? Lorem, ipsum dolor
+               sit amet consectetur adipisicing elit. Vero debitis, laudantium obcaecati cum fuga voluptates
+                reiciendis facilis vel excepturi iusto dolore distinctio sit eum ipsam iste quis atque! A, culpa.
+            </p>
+    </div>
+
+    <div class="div2">
+        <div class="inside-div">
+             <h1>PARALLAX WEBSITE</h1> 
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Section Two</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, ut commodi, cum odit saepe quis
+             dolorum pariatur maiores natus, provident odio molestiae nostrum? Eum veniam consequuntur quaerat
+              aut sapiente voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, 
+              sunt voluptatum. Perspiciatis ipsa, numquam suscipit error itaque saepe assumenda neque similique
+              , praesentium aut facere aliquid quo? Perspiciatis cupiditate quas debitis? Lorem, ipsum dolor
+               sit amet consectetur adipisicing elit. Vero debitis, laudantium obcaecati cum fuga voluptates
+                reiciendis facilis vel excepturi iusto dolore distinctio sit eum ipsam iste quis atque! A, culpa.
+            </p>
+    </div>
+ 
+    <div class="div3">
+        <div class="inside-div">
+            <h1>PARALLAX WEBSITE</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Section Three</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, ut commodi, cum odit saepe quis
+             dolorum pariatur maiores natus, provident odio molestiae nostrum? Eum veniam consequuntur quaerat
+              aut sapiente voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, 
+              sunt voluptatum. Perspiciatis ipsa, numquam suscipit error itaque saepe assumenda neque similique
+              , praesentium aut facere aliquid quo? Perspiciatis cupiditate quas debitis? Lorem, ipsum dolor
+               sit amet consectetur adipisicing elit. Vero debitis, laudantium obcaecati cum fuga voluptates
+                reiciendis facilis vel excepturi iusto dolore distinctio sit eum ipsam iste quis atque! A, culpa.
+            </p>
+    </div>
+  <div class="card-section">
+    <div class="card" style="width: 18rem;" >
+        <img src=" https://th.bing.com/th/id/OIP.Q1cwAIAULbvlCfPAJN54mQHaEo?w=302&h=187&c=7&r=0&o=5&pid=1.7 " class="card-img-top" alt="...">
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img    src=" https://th.bing.com/th/id/OIP.AVt2EhhZLtBQA0CDZkWzJAHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="...">
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.UE6QATB10_WbCmKaq5j-sgHaEK?w=327&h=184&c=7&r=0&o=5&pid=1.7 " class="card-img-top" alt="...">
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP._-rNRlcjf2K2ZswaTuY9MwHaEK?w=303&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="...">
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.q4sBWDqmSUJEcBXM6XV_jgHaEo?w=303&h=187&c=7&r=0&o=5&pid=1.7 " class="card-img-top" alt="...">
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.UB8foMm21FGFO2rR1J2q1QHaEK?w=328&h=184&c=7&r=0&o=5&pid=1.7 " class="card-img-top" alt="...">
+      </div>
+
+      
+
+  </div>
+
+  <!-- footer section -->
+
+    <footer>
+           &copy; Terms & Conditions || Policy Applied 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
